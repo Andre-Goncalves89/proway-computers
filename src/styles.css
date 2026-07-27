@@ -11,6 +11,7 @@
   --dark-blue: #002255;
   --gray: #333333;
   --light-gray: #f2f2f2;
+  --light-gray-2: #e0e0e0;
 }
 
 .main-header {    
@@ -24,20 +25,20 @@
 
 .main-header__title {   
     margin: 0; 
-    font-size: 36px;
+    font-size: 60px;
     letter-spacing: -1.5px;    
 }
 
 .main-header__title--blue {
     color: var(--blue);
     color: blue;
-    font-size:36px;
+    font-size:60px;
 }
 
 .main-header__title--orange {
     color: var(--orange);
     color: orange;
-    font-size:30px;
+    font-size:60px;
 }
 
 .main-header__menu ul {
