@@ -1,0 +1,93 @@
+/* Container principal organizando os cards em Grid Responsivo */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card individual do produto */
+.product-list__card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Efeito ao passar o mouse por cima do card */
+.product-list__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-color: #005691;
+}
+
+/* Link interno para remover sublinhado padrão do HTML */
+.product-list__link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+/* Imagem ajustada no topo do card */
+.product-list__link img {
+  width: 100%;
+  max-width: 200px;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+/* Título do produto */
+.product-item__name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e3a8a; /* Azul escuro igual ao do vídeo */
+  margin: 8px 0;
+  min-height: 48px; /* Garante que títulos longos/curtos fiquem alinhados */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Preço destacado em laranja */
+.product-item__price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ff6600; /* Laranja da Proway/Capgemini */
+  margin: 4px 0;
+}
+
+/* Descrição "à vista" */
+.product-item__price-description {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+/* Botão comprar */
+.product-item__buy-button {
+  background-color: #005691; /* Azul Proway */
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: auto; /* Empurra o botão sempre para o rodapé do card */
+}
+
+.product-item__buy-button:hover {
+  background-color: #003d66;
+}
