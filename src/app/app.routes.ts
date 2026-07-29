@@ -7,5 +7,9 @@ export const routes: Routes = [
     path: 'produtos',
     loadComponent: () => import('./produtos/produtos').then(m => m.ProdutosComponent)
   },
+  {
+    path: 'produtos/:id',
+    loadComponent: ()=> import('./produtos/detalhes-produto/detalhes-produto').then(m => m.DetalhesProduto)
+  },
   {path: '**', component: NaoEncontrado}
 ];
