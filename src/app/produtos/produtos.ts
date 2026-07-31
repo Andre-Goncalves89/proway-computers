@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Iproduto, produtos } from '../produtos'; // 👈 Importa do outro arquivo!
+import { ProdutosService } from './produtos.service';
 
 @Component({
   selector: 'app-produtos',
@@ -11,9 +12,13 @@ import { Iproduto, produtos } from '../produtos'; // 👈 Importa do outro arqui
   styleUrl: './produtos.css'
 })
 export class ProdutosComponent implements OnInit {
-  produtos: Iproduto[] = produtos; // 👈 Atribui para a variável da classe
+  produtos: Iproduto[] | undefined; // 👈 Atribui para a variável da classe
+
+  private produtosService = inject(ProdutosService)
 
   constructor() { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.produtos = this.produtosService.getAll();
+   }
 }
