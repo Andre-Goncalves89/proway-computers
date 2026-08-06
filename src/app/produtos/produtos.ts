@@ -19,6 +19,6 @@ export class ProdutosComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.produtos = this.produtosService.getAll();
+    this.produtos = this.produtosService.getAll(); 
    }
 }
