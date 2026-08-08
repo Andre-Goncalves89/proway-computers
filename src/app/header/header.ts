@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Carrinho } from '../carrinho';
 
 @Component({
   selector: 'app-header',
@@ -6,4 +7,11 @@ import { Component } from '@angular/core';
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
-export class Header {}
+
+export class Header {
+  private carrinho = inject(Carrinho)
+
+  get quantidadeCarrinho(): number {
+    return this.carrinho.obterCarrinho().reduce((total: number, item: any) => total + item.quantidade, 0);
+  }
+}

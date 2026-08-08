@@ -7,6 +7,10 @@ export interface Iproduto {
     quantidadeEstoque: number;
 }
 
+export interface IcarrinhoProduto extends Iproduto {
+  quantidade: number;
+}
+
 export const produtos: Iproduto[] = [
     { id: 1, descricao: "Mouse gamer", preco: 439.00, descricaoPreco: "À vista no PIX", imagem: "assets/mouse-3.jpg", quantidadeEstoque: 10},
   { id: 2, descricao: "Monitor muito bom", preco: 1200.50, descricaoPreco: "À vista no PIX", imagem: "assets/monitor-1.jpg", quantidadeEstoque: 10},
