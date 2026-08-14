@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Iproduto } from '../../produtos';
 import { ProdutosService } from '../produtos.service';
 import { NotificacaoService } from '../../notificacao.service';
-import { Carrinho } from '../../carrinho';
+import { CarrinhoService } from '../../carrinho.service';
 
 @Component({
   selector: 'app-detalhes-produto',
@@ -23,7 +23,7 @@ export class DetalhesProduto implements OnInit {
   private produtosService = inject(ProdutosService)
   private route = inject(ActivatedRoute)
   private router = inject(Router);
-  private carrinho = inject(Carrinho)
+  private carrinho = inject(CarrinhoService)
 
   ngOnInit(): void {
     const routeParams = this.route.snapshot.paramMap;
