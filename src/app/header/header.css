@@ -116,3 +116,29 @@
     color: #fff;
     font-size: 22px;
 }
+
+/* Responsividade para Dispositivos Móveis / Celular */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .main-header__title,
+  .main-header__title--blue,
+  .main-header__title--orange {
+    font-size: 36px !important; /* Reduz drasticamente o tamanho da logo no celular */
+  }
+
+  .container-menu {
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .main-header__menu ul,
+  .social-list {
+    justify-content: flex-start;
+  }
+}
