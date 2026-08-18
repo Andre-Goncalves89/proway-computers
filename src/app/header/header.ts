@@ -1,10 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { CarrinhoService } from '../carrinho.service';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { BarraPesquisaComponent } from '../barra-pesquisa/barra-pesquisa';
 
 @Component({
   selector: 'app-header',
-  imports: [ RouterLink, RouterLinkActive],
+  standalone: true,
+  imports: [ RouterLink, RouterLinkActive, BarraPesquisaComponent],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
