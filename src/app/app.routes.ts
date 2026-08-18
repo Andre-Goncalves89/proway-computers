@@ -15,5 +15,9 @@ export const routes: Routes = [
   path: 'carrinho',
   loadComponent: () => import('./carrinho/carrinho').then(m => m.CarrinhoComponent)
 },
+{
+  path: 'contato',
+  loadComponent: () => import('./contato/contato').then(m => m.ContatoComponent)
+},
   {path: '**', component: NaoEncontrado}
 ];
