@@ -24,6 +24,20 @@
     font-size:60px;
 }
 
+.main-header__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.main-header__menu > ul:first-child {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
 .main-header__menu ul {
     display: flex;
     justify-content: flex-end;
@@ -49,7 +63,25 @@
 .container-menu {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    align-items: flex-end;
+    row-gap: 10px;
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  list-style: none;
+}
+
+.social-list a {
+  font-size: 20px;
+  color: var(--dark-blue); /* Ou a cor que você estiver usando nos ícones */
+  transition: color 0.3s ease;
+}
+
+.social-list a:hover {
+  color: var(--orange);
 }
 
 .badge-carrinho {
