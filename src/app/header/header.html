@@ -1,28 +1,43 @@
-<header class="main-header">
-    <h1 class="main-header__title">
+<header class="main-header container-fluid py-3 px-3 px-md-4">
+  <!-- Linha principal usando o Grid do Bootstrap -->
+  <div class="row align-items-center justify-content-between g-3">
+    
+    <!-- Coluna da Logo (responsiva nativamente) -->
+    <div class="col-12 col-lg-auto text-center text-lg-start">
+      <h1 class="main-header__title m-0">
         <span class="main-header__title--blue">Proway</span><span class="main-header__title--orange">Computers</span>
-    </h1>
-    <div class="container-menu">
-       <nav class="main-header__menu">
-  <!-- Linha superior com os links normais -->
-  <ul>
-    <li><a routerLink="/produtos" routerLinkActive="active">Produtos</a></li>
-    <li>
-      <i class="fa-solid fa-cart-shopping"></i>
-      <a routerLink="/carrinho" routerLinkActive="active">Carrinho</a>
-      <span class="badge-carrinho">{{ quantidadeCarrinho }}</span>
-    </li>
-    <li><a routerLink="/contato" routerLinkActive="active">Contato</a></li>
-  </ul>
-
-  <!-- Linha inferior exclusiva para os ícones sociais -->
-  <ul class="social-list">
-    <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
-    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-  </ul>
-</nav>  
-        <app-barra-pesquisa></app-barra-pesquisa>
+      </h1>
     </div>
+
+    <!-- Coluna do Menu, Barra de Pesquisa e Redes Sociais -->
+    <div class="col-12 col-lg-auto container-menu d-flex flex-column align-items-lg-end">
+      
+      <nav class="main-header__menu w-100">
+        <!-- Links superiores (Produtos, Carrinho, Contato) -->
+        <ul class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-end gap-3 list-unstyled m-0 p-0">
+          <li><a routerLink="/produtos" routerLinkActive="active" class="text-decoration-none">Produtos</a></li>
+          <li class="d-flex align-items-center position-relative">
+            <i class="fa-solid fa-cart-shopping me-1"></i>
+            <a routerLink="/carrinho" routerLinkActive="active" class="text-decoration-none">Carrinho</a>
+            <span class="badge-carrinho ms-1">{{ quantidadeCarrinho }}</span>
+          </li>
+          <li><a routerLink="/contato" routerLinkActive="active" class="text-decoration-none">Contato</a></li>
+        </ul>
+
+        <!-- Redes sociais logo abaixo, alinhadas -->
+        <ul class="social-list d-flex flex-wrap align-items-center justify-content-center justify-content-lg-end gap-3 list-unstyled mt-2 m-0 p-0">
+          <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-whatsapp"></i></a></li>
+          <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        </ul>
+      </nav>
+
+      <!-- Barra de pesquisa -->
+      <div class="w-100 mt-2">
+        <app-barra-pesquisa></app-barra-pesquisa>
+      </div>
+
+    </div>
+  </div>
 </header>
